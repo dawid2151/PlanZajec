@@ -1,0 +1,29 @@
+﻿@model AddLessonViewModel
+
+<div>
+      @if (Model.Message is not null)
+      {
+            <h2>@Model.Message</h2>
+      }
+      @using (@Html.BeginForm("AddLesson", "PlanEditor"))
+      {
+            <div class="form-group">
+                  @Html.LabelFor(x => x.GroupId)
+                  @Html.DropDownListFor(x => x.GroupId, Model.GroupsSelectList, new {@class = "form-control"})
+                  @Html.LabelFor(x => x.SubjectId)
+                  @Html.DropDownListFor(x => x.SubjectId, Model.SubjectsSelectList, new {@class = "form-control"})
+                  @Html.LabelFor(x => x.ActivityTypeId)
+                  @Html.DropDownListFor(x => x.ActivityTypeId, Model.ActivityTypeSelectList, new {@class = "form-control"})
+                  @Html.LabelFor(x => x.ClassroomId)
+                  @Html.DropDownListFor(x => x.ClassroomId, Model.ClassroomsSelectList, new {@class = "form-control"})
+                  @Html.LabelFor(x => x.TeacherId)
+                  @Html.DropDownListFor(x => x.TeacherId, Model.TeachersSelectList, new {@class = "form-control"})
+                  @Html.LabelFor(x => x.StartingDate)
+                  <input type="datetime-local" name="StartingDate"/>
+                  @Html.LabelFor(x => x.EndingDate)
+                  <input type="datetime-local" name="EndingDate"/>
+                  <br/>
+                  <button class="btn btn-primary">Dodaj</button>
+            </div>
+      }
+</div>

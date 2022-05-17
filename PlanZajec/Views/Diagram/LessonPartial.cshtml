@@ -1,0 +1,12 @@
+﻿@model LessonPartialViewModel
+
+<div class="rounded bg-secondary text-light font-weight-bold m-2">
+    <div id="lesson-name" class="m-1">@Model.ActivityType @Model.LessonName</div>
+    <div id="group-name" class="m-1">@Model.GroupName</div>
+    <div id="teacher-name" class="m-1">@Model.TeacherName</div>
+    <div id="classroom-name" class="m-1">@Model.Classroom</div>
+    <div id="dates" class="d-flex justify-content-around m-1">
+        <div id="startingDate">@Model.StartingDate</div>
+        <div id="endingDate">@Model.EndingDate</div>
+    </div>
+</div>

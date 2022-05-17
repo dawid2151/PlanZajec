@@ -1,0 +1,14 @@
+﻿@model DiagramIndexViewModel
+
+@{
+    ViewBag.Title = "Plan Zajęć";
+    Layout = "_Layout";
+}
+<!-- TODO: -->
+<h2>Aktualne lekcje</h2>
+<div class="col-6 d-flex flex-column">
+    @foreach (var m in @Model.LessonViewModels)
+    {
+        @await Html.PartialAsync("LessonPartial", m)
+    }
+</div>

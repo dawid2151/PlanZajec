@@ -1,0 +1,3 @@
+﻿namespace PlanZajec.Utilities.Extensions
+{
+}
